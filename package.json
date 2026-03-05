@@ -4,28 +4,39 @@
   "description": "AI Agent framework for chaining Bittensor subnet APIs",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsx src/index.ts",
+    "dev": "tsx src/server.ts",
+    "start": "node dist/server.js",
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src",
     "format": "prettier --write src"
   },
-  "keywords": ["bittensor", "ai", "agents", "subnet"],
+  "keywords": [
+    "bittensor",
+    "ai",
+    "agents",
+    "subnet"
+  ],
   "author": "Daniel Dere",
   "license": "MIT",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
     "axios": "^1.6.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "anthropic": "^0.10.0"
+    "express": "^4.18.0"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.2.0",
-    "tsx": "^4.0.0",
-    "eslint": "^8.50.0",
-    "prettier": "^3.0.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
     "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@vercel/node": "^5.6.10",
+    "eslint": "^8.50.0",
     "jest": "^29.7.0",
-    "ts-jest": "^29.1.1"
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.1.1",
+    "tsx": "^4.0.0",
+    "typescript": "^5.2.0"
   }
 }

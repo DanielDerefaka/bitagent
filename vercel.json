@@ -1,0 +1,26 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "nodejs",
+  "nodejs": "20",
+  "functions": {
+    "api/handler.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/handler.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/handler.ts"
+    }
+  ],
+  "env": {
+    "ANTHROPIC_API_KEY": "@anthropic_api_key",
+    "DESEARCH_API_URL": "https://console.desearch.ai"
+  }
+}
